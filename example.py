@@ -6,7 +6,7 @@ from aiqs import *
 modelinterface = ModelInterface()
 
 
-prompt = "Introduce yourself, with enthusiasm! Keep it short though!"
+prompt = "Introduce yourself, with enthusiasm! Keep it short though and use emojis!"
 
 if all([aws_region, access_key, secret_key, aws_username]):
     for model in "haiku sonnet opus".split():
@@ -16,5 +16,5 @@ if all([aws_region, access_key, secret_key, aws_username]):
 if openai_api_key:
     for model in "gpt-4o gpt-3.5-turbo".split():
         response = modelinterface.send_to_ai(prompt, model=model, max_tokens=500, temperature=1.3)
-        print(response[0])
+        print(response[0], '\n')
 
