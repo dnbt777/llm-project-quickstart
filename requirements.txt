@@ -1,0 +1,5 @@
+boto3
+botocore
+beautifulsoup4
+openai
+python-dotenv
