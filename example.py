@@ -1,15 +1,20 @@
-from aiqs.ModelInterface import ModelInterface
+# initializes loading of dotenv and stuff
+from aiqs import *
 
-import os
-from dotenv import load_dotenv
+ # initialize the model interface
+ # automatically makes bedrock client, openai client, and cost tracker
+modelinterface = ModelInterface()
 
-# Load environment variables from a .env file
-load_dotenv()
 
-# Now you can access the environment variables
-aws_region = os.getenv("AWS_REGION")
-access_key = os.getenv("ACCESS_KEY")
-secret_key = os.getenv("SECRET_KEY")
-session_token = os.getenv("SESSION_TOKEN")
+prompt = "Introduce yourself, with enthusiasm! Keep it short though!"
 
-openai_api_key = os.getenv("OPENAI_API_KEY")
+if all([aws_region, access_key, secret_key, aws_username]):
+    for model in "haiku sonnet opus".split():
+        response = modelinterface.send_to_ai(prompt, model=model)
+        modelinterface.cost_tracker.show_cost_data()
+
+if openai_api_key:
+    for model in "gpt-4o gpt-3.5-turbo".split():
+        response = modelinterface.send_to_ai(prompt, model=model)
+        print(response[0])
+
