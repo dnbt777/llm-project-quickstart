@@ -1,6 +1,9 @@
 # AI Project Quickstart (v1.0)
 quicktart template for LLM projects. includes useful tools, logging, cost tracking etc, v easy
 
+<img src="https://github.com/dnbt777/ai-project-quickstart/assets/169108635/10648629-9c82-4ff5-8e63-54b9aa378b19" alt="image" width="300"/>
+
+
 
 # SETUP
 1. rename .env-template to .env and fill in your openai keys, bedrock keys, etc
