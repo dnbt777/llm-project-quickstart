@@ -1,4 +1,4 @@
-# AI Project Quickstart (v1.0)
+# LLM Project Quickstart (v1.0)
 quicktart template for LLM projects. includes useful tools, logging, cost tracking etc, v easy
 
 <div style="text-align: center;">
