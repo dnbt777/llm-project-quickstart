@@ -17,6 +17,15 @@ quicktart template for LLM projects. includes useful tools, logging, cost tracki
 
 
 
+## strings for claude models
+haiku
+
+opus
+
+sonnet
+
+sonnet3.5 //new
+
 # support
 
 raise an issue here or DM me on twitter @dnbt777
