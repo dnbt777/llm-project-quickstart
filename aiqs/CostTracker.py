@@ -47,6 +47,10 @@ class CostTracker():
                 "input" : 0.015,
                 "output": 0.075,
             },
+            "sonnet3.5" : {
+                "input" : 0.003,
+                "output": 0.015,
+            },
         }
         model_costs = {
             model : {

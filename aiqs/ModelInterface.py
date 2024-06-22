@@ -78,6 +78,7 @@ class ModelInterface():
             "haiku": "anthropic.claude-3-haiku-20240307-v1:0",
             "sonnet": "anthropic.claude-3-sonnet-20240229-v1:0",
             "opus": "anthropic.claude-3-opus-20240229-v1:0",
+            "sonnet3.5" : "anthropic.claude-3-5-sonnet-20240620-v1:0",
         }[model]
         try:
             response_stream = client.invoke_model_with_response_stream(
@@ -151,7 +152,7 @@ class ModelInterface():
         log("SENDING PROMPT, LENGTH =", len(prompt))
         log("Estimated tokens:", len(prompt) // 5)
         log("PROMPT:", prompt)
-        if model in ["sonnet", "haiku", "opus"] or model_type=="bedrock": # for custom finetunes
+        if model in ["sonnet", "haiku", "opus", "sonnet3.5"] or model_type=="bedrock": # for custom finetunes
             if stream == False:
                 result_text, metrics = self.model_interface.invoke_claude_3_with_text(prompt, model=model, max_tokens=max_tokens)
             else:
