@@ -18,25 +18,13 @@ quicktart template for LLM projects. includes useful tools, logging, cost tracki
 
 
 ## supported models
-gpt-4o
 
-gpt-3.5-turbo
-
-bedrock-haiku
-
-bedrock-opus
-
-bedrock-sonnet
-
-bedrock-sonnet3.5
-
-anthropic-haiku
-
-anthopic-opus
-
-anthropic-sonnet
-
-anthropic-sonnet3.5
+| OpenAI           | Bedrock           | Anthropic           |
+|------------------|-------------------|---------------------|
+| gpt-4o           | bedrock-haiku     | anthropic-haiku     |
+| gpt-3.5-turbo    | bedrock-opus      | anthropic-opus      |
+|                  | bedrock-sonnet    | anthropic-sonnet    |
+|                  | bedrock-sonnet3.5 | anthropic-sonnet3.5 |
 
 # support
 
