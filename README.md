@@ -17,14 +17,26 @@ quicktart template for LLM projects. includes useful tools, logging, cost tracki
 
 
 
-## strings for claude models
-haiku
+## strings for models
+gpt-4o
 
-opus
+gpt-3.5-turbo
 
-sonnet
+bedrock-haiku
 
-sonnet3.5 //new
+bedrock-opus
+
+bedrock-sonnet
+
+bedrock-sonnet3.5
+
+anthropic-haiku
+
+anthopic-opus
+
+anthropic-sonnet
+
+anthropic-sonnet3.5
 
 # support
 
