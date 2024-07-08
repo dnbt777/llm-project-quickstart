@@ -17,7 +17,7 @@ quicktart template for LLM projects. includes useful tools, logging, cost tracki
 
 
 
-## strings for models
+## supported models
 gpt-4o
 
 gpt-3.5-turbo
