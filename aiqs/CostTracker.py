@@ -57,6 +57,10 @@ class CostTracker():
                 "input" : 0.003,
                 "output": 0.015,
             },
+            "sonnet3.7" : {
+                "input" : 0.003,
+                "output": 0.015,
+            },
             "gpt-4o" : {
                 "input" : 1000*(5.00/1_000_000),
                 "output": 1000*(15.00/1_000_000),

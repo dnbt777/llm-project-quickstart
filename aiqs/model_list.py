@@ -4,8 +4,8 @@ bedrock_models = {
             "bedrock-opus": "anthropic.claude-3-opus-20240229-v1:0",
             "bedrock-sonnet3.5": "anthropic.claude-3-5-sonnet-20240620-v1:0",
             "bedrock-sonnet3.5v2": "anthropic.claude-3-5-sonnet-20241022-v2:0",
-            "bedrock-sonnet3.7": "anthropic.claude-3-7-sonnet-20250219-v1:0",
-}
+            "bedrock-sonnet3.7": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+} # added US. change if in different country. todo - source from .env
 
 anthropic_models = {
             "anthropic-haiku": "claude-3-haiku-20240307",

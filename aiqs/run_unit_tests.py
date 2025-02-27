@@ -13,12 +13,14 @@ def run_unit_tests():
         "bedrock-sonnet",
         "bedrock-opus",
         "bedrock-sonnet3.5",
+        "bedrock-sonnet3.7"
         "gpt-4o",
         "gpt-3.5-turbo",
         "anthropic-haiku",
         "anthropic-sonnet",
         "anthropic-opus",
         "anthropic-sonnet3.5",
+        "anthropic-sonnet3.7",
     ]
 
     test_prompt = "Say your name, then the capital of France, then a prime number"

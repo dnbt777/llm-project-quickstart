@@ -43,7 +43,7 @@ class ModelInterface():
         # Initialize Anthropic client
         self.anthropic_client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 
-    def invoke_claude_3_with_text(self, prompt, model="bedrock-sonnet", max_tokens=1000):
+    def invoke_claude_3_with_text(self, prompt, model="bedrock-haiku3.5", max_tokens=1024):
         """Invokes Anthropic Claude 3 Sonnet to run an inference using the input provided in the request body."""
         client = self.client or boto3.client(service_name="bedrock-runtime", region_name="us-west-2")
         model_id = bedrock_models[model]
@@ -178,11 +178,12 @@ class ModelInterface():
             log(f"Couldn't invoke Anthropic {model}. Here's why: {str(err)}")
             raise
 
-    def send_to_ai(self, prompt, model, max_tokens=1000, temperature=0.5, stream=False, metrics=True):
-        log(f"Sending to {model}")
-        log("SENDING PROMPT, LENGTH =", len(prompt))
-        log("Estimated tokens:", len(prompt) // 5)
-        log("PROMPT:", prompt)
+    def send_to_ai(self, prompt, model, max_tokens=1000, temperature=0.5, stream=False, metrics=True, logging=True):
+        if logging:
+            log(f"Sending to {model}")
+            log("SENDING PROMPT, LENGTH =", len(prompt))
+            log("Estimated tokens:", len(prompt) // 5)
+            log("PROMPT:", prompt)
         if model.startswith("bedrock-"):
             if not stream:
                 result_text, metrics = self.invoke_claude_3_with_text(prompt, model=model, max_tokens=max_tokens)
